@@ -1,0 +1,268 @@
+/* Usado para importar regras de estilo de outras folhas de estilo. */
+@import"https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap";
+
+/* Este seletor escolhe todos os elementos do documento e redeﬁne
+todas as conﬁguracées do navegador. */
+* { 
+    margin: 0px; 
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    font-family: “Source Sans Pro”, sans-serif;
+    font-weight: 300;
+    vertical-align: baseline;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Formatando a classe "conteudo" do HTML. -- OK */
+.conteudo {
+    width: 1024px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Formatando a classe "linha" do HTML -- OK*/
+.linha {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Todas as "sections" dentro de "header" herdam essa formatação */
+header section {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* A lista de navegação do "header" herda essa formatação. */
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Cada item dentro da lista de navegação do "header" herdará essa formatação */
+header nav ul li a {
+    margin: 0px 15px;
+    color: #39c;
+}
+
+/* Formatando a classe "botao" do HTML. */
+.botao {
+    padding: 5px 30px;
+    border-radius: 10px;
+}
+
+/* Formatando o destaque do botão */
+.botao.botao-destaque {
+    background: #30C5CC;
+    color: #fff;
+}
+
+/* Formatando a classe "sobre" do HTML. */
+.sobre {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Formatando os "articles" presentes em "sobre" no HTML. */
+.sobre article {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+}
+
+/* Formatando o título do article */
+.sobre article h1 {
+    font-size: 70px;
+    line-height: 90%;
+    font-weight: 400;
+    color: #336;
+}
+
+/* Extendendo a formatação do subtitulo aos paragrafos de "article" */
+.sobre article h2, .sobre article p {
+color: #39c;}
+
+/* Incrementando a formatação do subtitulo de "article" */
+.sobre article h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 200%;
+}
+
+/* Incrementando a formatação dos parágrafos presentes em "article" */
+.sobre article p {
+    margin: 10px 0 40px;
+}
+
+/* Modificando a largura da imagem presente em "article" */
+.sobre article div figcaption img {
+    width: 700px;
+}
+
+.sobre article div fieldset{
+    width: 60%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+footer .linha{
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Formatando a lista presente no rodapé da página.*/
+footer ul li {
+    margin: 0 30px 0 0;
+}
+
+/* Formatando a largura das imagens utilizadas nos links para redes sociais.*/
+footer ul li a img {
+width: 30px;
+}
+
+/* A PARTIR DESSE PONTO VAMOS FAZER A RESPONSIVIDADE NO CSS*/
+
+/* Deﬁne o tamanho dos elementos em telas de 1150px. */
+@media(max-width: 1150px) {
+    .conteudo {
+    width: 950px;
+    }
+}
+
+/* Deﬁne o tamanho dos elementos em telas de 1024px. */
+@media(max-width: 1024px) {
+    .conteudo {
+        width: 850px;
+    }
+
+    .sobre article div ﬁgcaption img {
+        width: 600px;
+    }
+}
+
+/* Deﬁne o tamanho dos elementos em telas de 915px. */
+@media(max-width: 915px) {
+    
+    .conteudo {
+        width: 600px;
+    }
+    
+    .linha {
+    flex-direction: column;
+    }
+    
+    header nav {
+        margin: 30px 0;
+    }
+    .sobre article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .sobre article div ﬁgcaption img {
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+    
+    footer .linha {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Deﬁne o tamanho dos elementos em telas de 665px. */
+@media(max-width: 665px) {
+    .conteudo {
+        width: 400px;
+    }
+}
+
+/* Deﬁne o tamanho dos elementos em telas de 450px. */
+@media(max-width: 450px) {
+    
+    .conteudo {
+        width: 290px;
+    }
+        
+    header nav {
+        width: 100%;
+        padding: 10px 0 20px;
+    }
+
+    header nav ul {
+    flex-direction: column;
+    }
+    
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Formatando a página de contato */
+/* Formatação global do formulário.*/
+h5 {
+    color: #39c;
+    padding-bottom: 2.5px; 
+    padding-top: 20px;
+    font-weight: 600;
+}
+
+fieldset {
+    width: 60%;
+    margin-left: 10px;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    padding:20px;
+}
+
+/* Formatando a classe "agrupamento".*/
+.agrupamento {
+    display: flex;
+    flex-direction: column;
+}    
+
+/* Formatando a classe "agrupamento-botões".*/
+.agrupamento-botao {
+    padding-top: 10px;
+}
+
+/* Formatando a classe "entrada".*/
+.entrada {
+    font-family: inherit;
+    line-height: 1.15;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+/* Toda vez que um elemento da classe "agrupamento" ganhar foco (for selecionado) então formate assim.*/
+.entrada:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgb(173, 216, 230, 0.5);
+}
+
+/* Formatando a classe mensagem - Vale só pro campo mensagem*/
+.entrada.menssagem {
+    resize: none;
+}
+
+/* Formatando os rótulos do formulário.*/
+.rotulo {
+    padding-bottom: 2.5px; 
+    padding-top: 20px;
+    font-weight: 600;
+}

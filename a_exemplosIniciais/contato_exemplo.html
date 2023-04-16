@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <!--Demarcando uma região chamada formulário-->
+            <legend>Formulário:</legend>
+            <!--Inserindo um campo de texto com informação contida-->
+            <input type="text" placeholder="Digite seu nome"/><br>
+            <!--Inserindo um campo de senha-->
+            <input type="password" placeholder="Digite sua senha"/><br>
+            <!--Inserindo um campo de e-mail-->
+            <input type="e-mail" placeholder="Digite seu e-mail"/><br>
+            <!--Inserindo um campo de número-->
+            <input type="number" placeholder="Digite um número"/><br>
+            <!--Inserindo um campo de seleção com mouse - Já marcado-->
+            <input type="radio" id="rdoF" name="rdoSexo" value="F"/>
+            <label for="rdoF">Feminino</label>
+            <!--Inserindo um camopo de seleção com mouse - Não marcado-->
+            <input type="radio" id="rdoM" name="rdoSexo" value="M"/>
+            <label for="rdoM">Masculino</label><br>
+            <!--Inserindo um campo de seleção "manhã", sem restrição-->
+            <input type="checkbox" id="chkManha" name="chkManha" checked>
+            <label for="scales">Manhã</label>
+            <!--Inserindo um campo de marcação, sem restrição-->
+            <input type="checkbox" id="chkTarde" name="chkTarde">
+            <label for="chkTarde">Tarde</label><br>
+            <!--Inserindo um campo de entrada de arquivo - Upload Anexo-->
+            <input type="file" /><br>
+            <!--Inserindo um campo de demarcação de cor-->
+            <input type="color" /><br>
+            <!--Inserindo um campo de seleção de horário-->
+            <input type="time" /><br>
+            <!--Inserindo um campo de seleção de data-->
+            <input type="datetime-local" /><br>
+            <!--Inserindo um campo "tipo volume" clicar e arrasta-->
+            <input type="range"><br>
+            <!--Inserindo um campo de região de texto 30 caracteres 5 linhas-->
+            <textarea cols ="30" rows="5"></textarea><br>
+            <!--Inserindo um campo de "dropdown list" ou lista de seleção-->
+            <select>
+                <!--Aqui eu populo manualmente as opções-->
+                <!--Oportunidade de usar o JavaScript com o BancoDeDados-->
+                <!--Para construir uma lista automatizada e ordenada-->
+                <option value="">-Selecione-</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </select><br>
+            <!--Inserido o botão para enviar as informações POST-->
+            <input type="submit" value="Enviar" />
+        </fieldset>
+    </form>
+</body>
+</html>

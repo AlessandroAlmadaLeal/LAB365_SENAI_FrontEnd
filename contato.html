@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Incluindo arquivo CSS-->
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <!--Incluindo um título-->
+        <title>Meu site!</title>
+    </head>
+    <body>
+        
+        <!--Atividade 1: Inserir o header de navegação semelhante a página inicio-->
+        <header>
+            <section class="linha">
+                <!--Imagem do logo da empresa-->
+                <img src="./imagens/logo.png" alt="Logo da empresa XPTO" width="200px" />
+                <!--Barra de navegação: nav-->
+                <nav>
+                    <ul>
+                        <!--Link para a página de início-->
+                        <li><a class="botao" href="inicio.html">Início</a></li>
+                        <li><a class="botao botao-destaque" href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        
+        <main class="conteudo">
+            <section class="sobre">
+                <article>
+                    <div>        
+                        <!--Titulo e subtítulo | Respectivamente-->
+                        <h1>Contato</h1>
+                        <h2>Landing Page</h2>
+                        <!--Texto de apoio-->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Aliquam erat volutpat. Ut sollicitudin, felis viverra cursus finibus.</p>
+                        <p>Fusce placerat tellus sit amet augue porttitor, quis posuere lorem bibendum.</p><br>
+                    </div>
+                    <div>
+                        <fieldset class="agrupamento">
+                            <legend>
+                                <h5> DADOS PESSOAIS: </h5><br>
+                            </legend>    
+                            <form id="frmIncricao" action="contato.php" method="POST">
+                                <!--Campo de nome um pouqinho mais estruturado que no exercicio | Validação empregada-->
+                                <label class="rotulo">Nome:</label><br>
+                                <input class="entrada" type="text" required="required" maxlength="100" size="50" /><br><br>
+                                <!--Atividade 2: Opções de sexo inseridas-->
+                                <label class="rotulo">Sexo:</label>
+                                <input class="entrada" type="radio" id="rdoM" name="rdoSexo" value="M" required="required"/>
+                                <label class="rotulo" for="rdoM">Masculino</label>
+                                <input class="entrada" type="radio" id="rdoF" name="rdoSexo" value="F" required="required"/>
+                                <label class="rotulo" for="rdoF">Feminino</label><br><br>
+                                <!--Atividade 3: Incluido um campo para endereço-->
+                                <label class="rotulo">Endereço:</label><br>
+                                <input class="entrada" type="text" required="required" maxlength="90" size="50" placeholder="Rua:..., CEP:..., Nº..."  /><br><br>
+                                <table>
+                                    <tr>
+                                        <td><label class="rotulo">Estado: </label></td>
+                                        <td><label class="rotulo">Cidade: </label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="entrada" id="cbxEstado" required="required">
+                                                <option value="">-Selecione-</option>
+                                                <option value="1">SC</option>
+                                                <option value="2">MG</option>
+                                                <option value="3">SP</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <!--Atividade 4: Campo para Cidade Similar-->
+                                            <select class="entrada" id="cbxCidade" required="required">
+                                                <option value="">-Selecione-</option>
+                                                <option value="1">CURITIBA</option>
+                                                <option value="2">MONTE VERDE</option>
+                                                <option value="3">PIRACICABA</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table><br>
+                                <!--Atividade 5: Incluido um campo para celular com placeholder-->
+                                <label class="rotulo">Celular:</label><br>
+                                <input class="entrada" type="text" required="required" maxlength="14" size="50" placeholder="(##) ###### - ####"  /><br><br>
+                                <label class="rotulo">E-mail:</label><br>
+                                <input class="entrada" type="email" required="required" id="email" size="50" /><br><br>
+                                <!--Atividade 6: Opções de interesse completas-->
+                                <label class="rotulo">Áreas de Interesse:</label><br>
+                                <input class="entrada" type="checkbox" value="JavaScript" name="chkAreasInteresse">
+                                <label class="rotulo">JavaScript</label>
+                                <input class="entrada" type="checkbox" value="HTML" name="chkAreasInteresse">
+                                <label class="rotulo">HTML</label>
+                                <input class="entrada"type="checkbox" value="CSS" name="chkAreasInteresse">
+                                <label class="rotulo">CSS</label><br><br>
+                                <!--Atividade 6: Incluido campo para mensagem-->
+                                <label class="rotulo">Mensagem:</label><br>
+                                <textarea class="entrada menssagem" required="required" cols ="55" rows="5"></textarea><br><br>
+                                <!--Atividade 7: Incluido botão para submeter informações-->
+                                <input class="agrupamento botao botao-destaque" type="submit" value="Enviar" />
+                            </form>
+                        </fieldset>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <!--Atividade 9: Seção footer identica a página inicio-->
+        <footer>
+             <ul class="linha">
+                <li><a href="#"><img src="./imagens/logo-insta.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="./imagens/logo-facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="./imagens/logo-twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
